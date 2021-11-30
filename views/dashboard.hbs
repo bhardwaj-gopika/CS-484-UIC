@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+
+
+<body>
+<form action = "/logout" method ="GET">
+  <button type = "submit">Log Out</button>
+</form>
+
+
+
+<h1>Welcome back ! {{userNAmeInfo2}}</h1>
+
+
+<a href = "/">Home Page</a>
+
+<div>
+  <h3>Update user information</h3>
+  <form action="/update" method="POST">
+  										<div>
+    										<label for="username">username</label>
+    										<input type="text" id="username" name="username" required>
+  										</div>
+  										<button type="submit">Update</button>
+									</form>
+									
+  <h3>Delete user account</h3>
+  <form action="/delete" method="POST">
+  										<button type="submit">Delete</button>
+									</form>
+
+    <h3>User Feedback</h3>
+    {{response}}
+    <div class="container">
+									<h3>Feedback Form</h3>
+									<p>We are obsessed with customer happiness. Please let us know if you would like to schedule an appointment and any feedback you may want us to take into consideration.</p>
+									<form method="post" action="/userFeedback">
+										<div class="row gtr-uniform">
+											<div class="col-12"><input type="text" name="appointment" id="appointment" placeholder="Appointment"/></div>
+											<div class="col-12"><textarea name="feedback" id="feedback" placeholder="Feedback" rows="8"></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Submit Feedback" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+
+
+									
+
+
+</div>
+
+</body>
+</html>
