@@ -65,9 +65,4 @@ https://countriesnow.space/api/v0.1/countries/state/cities
 Implemented a bar graph using chart.js
 Bar Graph shows consistently good ratings received from Clients
 
-            
-
-
-
-
-
+        
